@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 
     <style>
+
         /* --- VARIABLES Y CONFIGURACIÓN GENERAL --- */
         :root {
             --primary-black: #0a0a0a;
@@ -80,13 +81,17 @@
         }
         .nav-link:hover::after { width: 100%; }
 
-        /* --- HERO SECTION --- */
+       
         .hero-section {
+         
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://fondosmil.co/fondo/72814.jpg');
+            min-height: 600px; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://fondosmil.co/fondo/72814.jpg');
             background-size: cover;
-            background-attachment: fixed; /* Efecto Parallax */
-            background-position: center;
+            background-position: center center;
+            background-repeat: no-repeat;
+            
+            /* 4. Alineación del texto (Flexbox) */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -94,6 +99,15 @@
             color: white;
             position: relative;
         }
+        @media (min-width: 992px) {
+            .hero-section {
+                background-attachment: fixed;
+            }
+        }
+
+
+
+        
         .hero-title {
             font-size: 3.5rem;
             text-transform: uppercase;
